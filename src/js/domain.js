@@ -3,7 +3,8 @@ class Validator {
   }
 
   validateUsername(name) {
-    return /^[^-_\d]((?!\d{4}).)*[^-_\d]$/.test(name)
+  	if (/\w|-/.test(name))
+    return /^[^-_\d]((?!\d{3}).)*[^-_\d]$/.test(name)
   }
 }
 
